@@ -59,6 +59,7 @@ nav {
     font-size: 20px;
     text-align: center;
     padding: 30px;
+    background-size: cover;
 }
 .title-img {
     background-image: url(./images/title\ image.jpg);
@@ -82,9 +83,6 @@ nav {
 .large-card-headings {
     font-size: 2em;
     font-weight: bolder;
-}
-.large-card-p {
-    font-size: 1.5em;
 }
 .blue-btn {
     background-color: rgb(0, 113, 227);
@@ -124,7 +122,4 @@ nav {
     .large-card-headings {
     font-size: 1.8em;
     }
-    .large-card-p {
-        font-size: 1em;
-    }   
 }
