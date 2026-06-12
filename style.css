@@ -10,7 +10,7 @@
 nav {
     background-color: rgba(29, 29, 31, .8);
     height: 44px;
-    position: sticky;
+    position: fixed;
     width: 100%;
     top: 0;
 }
@@ -49,7 +49,7 @@ nav {
 .large-cards{
     background-color: black;
     background-position: bottom;
-    height: 90%;
+    height: 95%;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -101,7 +101,94 @@ nav {
 .broder-top {
     border-top: 10px solid white;
 }
-
+.cards-cont {
+    height: 600px;
+    display: flex;
+}
+.cards-cont > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 50%;
+    padding: 10px;
+    border: 10px solid white;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+.card-1 > .left-card {
+    background-image: url('./images/apple-for-collage.jpg');
+}
+.card-1 > .right-card {
+    background-image: url('./images/macbook-air.jpg');
+}
+.endless-entertainment {
+    display: flex;
+    flex-direction: column;
+    height: 120%;
+    align-items: center;
+    background-color: #F5F5F7;
+}
+.img-cont {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.top {
+    height: 65%;
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+}
+.top > .img1 {
+    height: 100%;
+    width: 15%;
+    border: 10px solid white;
+    background-image: url("./images/basebal.jpg");
+    background-position: right;
+    border-left: none;
+    background-color: bisque;
+}.top > .img2{
+    height: 100%;
+    border: 10px solid white;
+    background-image: url("./images/mls.jpg");
+    width: 70%;
+    background-color: bisque;
+}.top > .img3 {
+    height: 100%;
+    border: 10px solid white;
+    background-image: url("./images/f1.jpg");
+    border-right: none;
+    width: 15%;
+    background-color: bisque;
+}
+.bottom {
+    height: 35%;
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+}
+.bottom > .img1, .img2, .img3{
+    background-color: blueviolet;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 33.4%;
+    border: 10px solid white;
+}
+.bottom > .img1 {
+    background-image: url("./images/bob.jpg");
+}
+.bottom > .img2 {
+    background-image: url("./images/fitness.jpg");
+}
+.bottom > .img3 {
+    background-image: url("./images/powerwash.jpg");
+}
 @media screen and (max-width: 768px) {
     .nav-links > ul{
         display: none;
@@ -113,6 +200,9 @@ nav {
         gap: 20px;
         padding: 10px;
     }
+    .broder-top {
+        border-top: 5px solid white;
+    }
     .iphone-17-pro {
         background-image: url(./images/iphone_17_pro_fone.jpg);
     }
@@ -121,5 +211,104 @@ nav {
     }
     .large-card-headings {
     font-size: 1.8em;
+    }
+    .cards-cont {
+        flex-direction: column;
+        height: 1000px;
+    }
+    .cards-cont > div {
+        width: 100%;
+        min-height: 500px;
+        gap: 20px;
+        border: 5px solid white;
+    }
+    .card-1 > .left-card {
+        background-image: url('./images/apple-for-collage-phone.jpg');
+    }   
+    .card-1 > .right-card {
+        background-image: url('./images/macbook-air-phone.jpg');
+    }
+    .img-cont {
+        height: 100%;
+    }
+    .top {
+        height: 300px;
+    }
+    .top > .img1 {
+        width: 10%;
+    }
+    .top > .img2 {
+        width: 80%;
+    }
+    .top > .img3 {
+        width: 10%;
+    }
+     .bottom {
+        height: 250px;
+     }
+    .bottom > .img1 {
+        background-image: url("./images/bob-phone.jpg");
+        width: 180px;
+    }
+    .bottom > .img2 {
+        background-image: url("./images/fitness-phone.jpg");
+        width: 180px;
+    }
+    .bottom > .img3 {
+        background-image: url("./images/powerwash-phone.jpg");
+        width: 180px;
+    }
+    .endless-entertainment {
+        height: 100%;
+    }
+}
+@media screen and (min-width: 769px) and (max-width:1100px) {
+    .cards-cont {
+        height: 520px;
+    }
+    .card-1 > .left-card {
+        background-image: url('./images/apple-for-collage-mid.jpg');
+    }   
+    .card-1 > .right-card {
+        background-image: url('./images/macbook-air-mid.jpg');
+    }
+}
+@media screen and (max-width: 525px) {
+    .top {
+        height: 400px;
+    }
+    .top > .img1 {
+        border: 5px solid white;
+        border-left: none;
+        width: 20%;
+        background-image: url('./images/basebal-phone.jpg');
+    }
+    .top > .img3 {
+        border: 5px solid white;
+        border-right: none;
+        width: 20%;
+        background-image: url("./images/f1-phone.jpg");
+    }
+    .top > .img2 {
+        width: 60%;
+        border: 5px solid white;
+        background-image: url('./images/mls-phone.jpg');
+    }
+    .endless-entertainment > h1 {
+        font-size: 1.5em;
+    }
+    .bottom > .img1 {
+        border: 5px solid white;
+        border-left: none;
+        width: 30%;
+    }
+    .bottom > .img3 {
+        border: 5px solid white;
+        border-right: none;
+        width: 30%;
+    }
+    .bottom > .img2 {
+        width: 50%;
+        border: 5px solid white;
     }
 }
