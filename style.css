@@ -5,7 +5,8 @@
 }
 #main {
     height: 100vh;
-    background-color: black;
+    background: #F5F5F7;
+    overflow-y: scroll;
 }
 nav {
     background-color: rgba(29, 29, 31, .8);
@@ -126,7 +127,7 @@ nav {
 .endless-entertainment {
     display: flex;
     flex-direction: column;
-    height: 120%;
+    height: 100%;
     align-items: center;
     background-color: #F5F5F7;
 }
@@ -139,46 +140,40 @@ nav {
 .top {
     height: 65%;
     width: 100%;
-    background-color: blue;
     display: flex;
     justify-content: space-between;
 }
 .top > .img1 {
     height: 100%;
-    width: 15%;
-    border: 10px solid white;
+    width: 20%;
+    border: 10px solid #F5F5F7;
     background-image: url("./images/basebal.jpg");
     background-position: right;
     border-left: none;
-    background-color: bisque;
 }.top > .img2{
     height: 100%;
-    border: 10px solid white;
+    border: 10px solid #F5F5F7;
     background-image: url("./images/mls.jpg");
-    width: 70%;
-    background-color: bisque;
+    width: 60%;
 }.top > .img3 {
     height: 100%;
-    border: 10px solid white;
+    border: 10px solid #F5F5F7;
     background-image: url("./images/f1.jpg");
     border-right: none;
-    width: 15%;
-    background-color: bisque;
+    width: 20%;
 }
 .bottom {
     height: 35%;
     width: 100%;
-    background-color: aqua;
     display: flex;
     justify-content: space-around;
 }
 .bottom > .img1, .img2, .img3{
-    background-color: blueviolet;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-    width: 33.4%;
-    border: 10px solid white;
+    width: 30.4%;
+    /* border: 10px solid white; */
 }
 .bottom > .img1 {
     background-image: url("./images/bob.jpg");
@@ -189,6 +184,60 @@ nav {
 .bottom > .img3 {
     background-image: url("./images/powerwash.jpg");
 }
+.apple-terms{
+    margin:auto;
+    padding: 24px 5em;
+    color: #656565;
+    line-height:1.7;
+    background: #F5F5F7;
+    margin-top: 20px;
+}
+
+.apple-terms > ol{
+    padding-left:22px;
+}
+
+.apple-terms > ol > li{
+    margin-bottom:20px;
+}
+
+.apple-terms> ol > li > p{
+    margin-bottom:16px;
+    font-size:14px;
+}
+
+.apple-terms ol > li > p > strong{
+    font-weight:600;
+}
+footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.16);
+    height: 80%;
+}
+.footer-content {
+    height: 100%;
+    display: flex;
+    gap: 50px;
+    background-color: #F5F5F7;
+    padding: 50px;
+    padding-top: 20px;
+    justify-content: center;
+}
+.footer-content > div > h4 {
+    margin-top: 10px;
+    font-size: 13px;
+    /* width: 50px; */
+}
+.footer-content > div > ul {
+    list-style: none;
+    padding-left: 10px;
+}
+.footer-content > div > ul > li {
+    color: #656565;
+    font-size: 13px;
+    margin-top: 10px;
+    min-width: 100px;
+}
+
 @media screen and (max-width: 768px) {
     .nav-links > ul{
         display: none;
@@ -210,7 +259,7 @@ nav {
         background-image: url(./images/iphone_17_fone.jpg);
     }
     .large-card-headings {
-    font-size: 1.8em;
+        font-size: 1.8em;
     }
     .cards-cont {
         flex-direction: column;
@@ -233,33 +282,67 @@ nav {
     }
     .top {
         height: 300px;
+        flex-wrap: wrap;
     }
     .top > .img1 {
-        width: 10%;
+        width: 15%;
+        border: 8px solid #F5F5F7;
     }
     .top > .img2 {
-        width: 80%;
+        width: 70%;
+        border: 8px solid #F5F5F7;
     }
     .top > .img3 {
-        width: 10%;
+        width: 15%;
+        border: 8px solid #F5F5F7;
     }
-     .bottom {
+    .bottom {
         height: 250px;
-     }
+        /* flex-wrap: wrap; */
+    }
+    .bottom > .img1, .bottom > .img2, .bottom > .img3 {
+        width: 32%;
+    }
     .bottom > .img1 {
         background-image: url("./images/bob-phone.jpg");
-        width: 180px;
     }
     .bottom > .img2 {
         background-image: url("./images/fitness-phone.jpg");
-        width: 180px;
     }
     .bottom > .img3 {
         background-image: url("./images/powerwash-phone.jpg");
-        width: 180px;
     }
     .endless-entertainment {
         height: 100%;
+    }
+    .apple-terms{
+        padding:16px;
+    }
+
+    .apple-terms > ol > li > p,
+    .apple-terms > ol > li{
+        font-size:13px;
+    }
+    footer {
+        height: 70%;
+    }
+    .footer-content {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        padding: 20px;
+        justify-content: flex-start;
+    }
+    .footer-content > div > ul {
+    display: none;
+    }
+    .footer-content > div > h4 {
+        padding: 5px;
+        font-size: 14px;
+        font-weight: lighter;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+        display: flex;
+        justify-content: space-between;
     }
 }
 @media screen and (min-width: 769px) and (max-width:1100px) {
@@ -272,27 +355,60 @@ nav {
     .card-1 > .right-card {
         background-image: url('./images/macbook-air-mid.jpg');
     }
+    .top {
+        height: 50%;
+    }
+    .top > .img1 {
+        width: 15%;
+        border: 8px solid #F5F5F7;
+    }
+    .top > .img3 {
+        width: 15%;
+        border: 8px solid #F5F5F7;
+    }
+    .top > .img2 {
+        width: 70%;
+        border: 8px solid #F5F5F7;
+    }
+    .bottom {
+        height: 30%;
+    }
+    .bottom > .img1, .bottom > .img2, .bottom > .img3 {
+        border: 8px solid #F5F5F7;
+        width: 32%;
+    }
+}
+@media screen and (min-width: 925px) and (max-width:1100px) {
+    .top {
+        height: 55%;
+    }
+    .bottom {
+        height: 35%;
+     }
+}
+@media screen and (max-width: 625px) {
+    .top {
+        height: 40%;
+    }
 }
 @media screen and (max-width: 525px) {
     .top {
         height: 400px;
     }
     .top > .img1 {
-        border: 5px solid white;
-        border-left: none;
-        width: 20%;
+        border: 5px solid #F5F5F7;
         background-image: url('./images/basebal-phone.jpg');
+        width: 20%;
     }
     .top > .img3 {
-        border: 5px solid white;
-        border-right: none;
+        border: 5px solid #F5F5F7;
+        background-image: url('./images/f1-phone.jpg');
         width: 20%;
-        background-image: url("./images/f1-phone.jpg");
     }
     .top > .img2 {
-        width: 60%;
-        border: 5px solid white;
         background-image: url('./images/mls-phone.jpg');
+        width: 60%;
+        border: 5px solid #F5F5F7;
     }
     .endless-entertainment > h1 {
         font-size: 1.5em;
@@ -301,14 +417,17 @@ nav {
         border: 5px solid white;
         border-left: none;
         width: 30%;
+        flex-shrink: 1;
     }
     .bottom > .img3 {
         border: 5px solid white;
         border-right: none;
+        flex-shrink: 1;
         width: 30%;
     }
     .bottom > .img2 {
         width: 50%;
         border: 5px solid white;
+        flex-grow: 1;
     }
 }
